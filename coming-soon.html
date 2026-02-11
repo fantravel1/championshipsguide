@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon — ChampionshipsGuide</title>
+  <meta name="description" content="Something championship-worthy is on the way. ChampionshipsGuide is expanding its coverage of world championships, finals, and title events across every sport.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.championshipsguide.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coming Soon — ChampionshipsGuide">
+  <meta property="og:description" content="Something championship-worthy is on the way. ChampionshipsGuide is expanding its coverage of world championships, finals, and title events across every sport.">
+  <meta property="og:url" content="https://www.championshipsguide.com/coming-soon.html">
+  <meta property="og:site_name" content="ChampionshipsGuide">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Coming Soon Page Styles -->
+  <style>
+    /* ---- Background pattern & gradient ---- */
+    .coming-soon-hero {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,175,55,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(33,150,243,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 20%, rgba(156,39,176,0.03) 0%, transparent 60%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 60px,
+          rgba(255,255,255,0.01) 60px,
+          rgba(255,255,255,0.01) 61px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 60px,
+          rgba(255,255,255,0.01) 60px,
+          rgba(255,255,255,0.01) 61px
+        ),
+        linear-gradient(180deg, #070c18 0%, #0B1120 30%, #111a2e 70%, #0B1120 100%);
+      padding: calc(var(--nav-height) + var(--space-3xl)) var(--space-lg) var(--space-3xl);
+    }
+
+    /* ---- Trophy icon ---- */
+    .coming-soon-hero__trophy {
+      font-size: 5rem;
+      display: inline-block;
+      margin-bottom: var(--space-xl);
+      filter: drop-shadow(0 0 40px rgba(212,175,55,0.35)) drop-shadow(0 0 80px rgba(212,175,55,0.15));
+      line-height: 1;
+    }
+
+    /* ---- Label pill ---- */
+    .coming-soon-hero__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: var(--space-lg);
+      padding: var(--space-xs) var(--space-lg);
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius-full);
+    }
+
+    /* ---- Heading ---- */
+    .coming-soon-hero__title {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: var(--space-lg);
+      color: var(--pure-white);
+      letter-spacing: -0.02em;
+    }
+
+    .coming-soon-hero__title em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---- Subtitle ---- */
+    .coming-soon-hero__subtitle {
+      font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+      color: var(--silver);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto var(--space-lg);
+      font-weight: 400;
+    }
+
+    /* ---- Description ---- */
+    .coming-soon-hero__desc {
+      font-size: 1rem;
+      color: var(--steel);
+      line-height: 1.7;
+      max-width: 540px;
+      margin: 0 auto var(--space-2xl);
+    }
+
+    /* ---- Actions ---- */
+    .coming-soon-hero__actions {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-3xl);
+    }
+
+    /* ---- Glow ring behind trophy ---- */
+    .coming-soon-hero__glow {
+      position: relative;
+      display: inline-block;
+    }
+
+    .coming-soon-hero__glow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+      animation: glow-pulse 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+      50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+    }
+
+    /* ---- Decorative divider ---- */
+    .coming-soon-hero__divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      border: none;
+      margin: 0 auto var(--space-xl);
+      border-radius: 2px;
+    }
+
+    /* ---- Feature hints ---- */
+    .coming-soon-hero__features {
+      display: flex;
+      gap: var(--space-xl);
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .coming-soon-hero__feature {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: 0.9rem;
+      color: var(--steel);
+    }
+
+    .coming-soon-hero__feature-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    /* ---- Simplified footer ---- */
+    .coming-soon-footer {
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: var(--space-xl) 0;
+      text-align: center;
+    }
+
+    .coming-soon-footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .coming-soon-footer__brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--pure-white);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .coming-soon-footer__brand span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .coming-soon-footer__copy {
+      font-size: 0.8rem;
+      color: var(--steel);
+    }
+
+    .coming-soon-footer__home {
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-fast);
+    }
+
+    .coming-soon-footer__home:hover {
+      color: var(--gold-light);
+    }
+
+    /* ---- Enhanced particle glow variants ---- */
+    .coming-soon-hero__particle:nth-child(3n) {
+      background: var(--gold-light);
+      opacity: 0.2;
+      box-shadow: 0 0 6px rgba(242,214,117,0.3);
+    }
+
+    .coming-soon-hero__particle:nth-child(5n) {
+      background: var(--gold-dark);
+      opacity: 0.15;
+    }
+
+    .coming-soon-hero__particle:nth-child(7n) {
+      background: rgba(255,255,255,0.5);
+      width: 2px !important;
+      height: 2px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand" aria-label="ChampionshipsGuide home">
+          <span class="nav__brand-icon" aria-hidden="true">&#127942;</span>
+          <span>ChampionshipsGuide</span>
+        </a>
+
+        <div class="nav__links">
+          <a href="tiers/index.html" class="nav__link">Tiers</a>
+          <a href="finals-calendar/index.html" class="nav__link">Calendar</a>
+          <a href="by-sport/index.html" class="nav__link">By Sport</a>
+          <a href="by-city/index.html" class="nav__link">By City</a>
+          <a href="how-it-works/index.html" class="nav__link">How It Works</a>
+          <a href="travel-guides/index.html" class="nav__link">Travel</a>
+        </div>
+
+        <a href="start-here/index.html" class="btn btn--primary btn--sm nav__cta">Start Here</a>
+
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="nav__mobile" aria-label="Mobile navigation">
+        <a href="tiers/index.html">Tiers</a>
+        <a href="finals-calendar/index.html">Calendar</a>
+        <a href="by-sport/index.html">By Sport</a>
+        <a href="by-city/index.html">By City</a>
+        <a href="how-it-works/index.html">How It Works</a>
+        <a href="travel-guides/index.html">Travel</a>
+        <a href="start-here/index.html">Start Here</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- ==================== COMING SOON HERO ==================== -->
+    <section class="coming-soon-hero" aria-label="Coming Soon">
+
+      <!-- Animated gold particles — JS auto-generates particle elements -->
+      <div class="coming-soon-hero__particles" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div style="position: relative; z-index: 2;">
+
+        <!-- Trophy Icon -->
+        <div class="coming-soon-hero__glow">
+          <div class="coming-soon-hero__trophy trophy-float" aria-hidden="true">&#127942;</div>
+        </div>
+
+        <!-- Label -->
+        <div class="coming-soon-hero__label">Under Construction</div>
+
+        <!-- Heading -->
+        <h1 class="coming-soon-hero__title">
+          <em>Coming Soon</em>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="coming-soon-hero__subtitle">
+          We're building something championship-worthy
+        </p>
+
+        <!-- Decorative divider -->
+        <hr class="coming-soon-hero__divider">
+
+        <!-- Description -->
+        <p class="coming-soon-hero__desc">
+          ChampionshipsGuide is expanding its coverage to bring you deeper analysis, new sports, more travel guides, and comprehensive profiles of the world's greatest championships. This section will be live soon.
+        </p>
+
+        <!-- Actions -->
+        <div class="coming-soon-hero__actions">
+          <a href="index.html" class="btn btn--primary btn--lg">
+            &#8592; Return to Homepage
+          </a>
+          <a href="index.html#championships" class="btn btn--secondary btn--lg">
+            Explore What's Ready &#8594;
+          </a>
+        </div>
+
+        <!-- Feature hints -->
+        <div class="coming-soon-hero__features">
+          <div class="coming-soon-hero__feature">
+            <span class="coming-soon-hero__feature-icon" aria-hidden="true">&#127941;</span>
+            New championships
+          </div>
+          <div class="coming-soon-hero__feature">
+            <span class="coming-soon-hero__feature-icon" aria-hidden="true">&#127758;</span>
+            More travel guides
+          </div>
+          <div class="coming-soon-hero__feature">
+            <span class="coming-soon-hero__feature-icon" aria-hidden="true">&#128202;</span>
+            Deeper analytics
+          </div>
+          <div class="coming-soon-hero__feature">
+            <span class="coming-soon-hero__feature-icon" aria-hidden="true">&#127919;</span>
+            Expanded tiers
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Simplified Footer -->
+  <footer class="coming-soon-footer">
+    <div class="container">
+      <div class="coming-soon-footer__inner">
+        <a href="index.html" class="coming-soon-footer__brand" aria-label="ChampionshipsGuide home">
+          <span aria-hidden="true">&#127942;</span>
+          <span>ChampionshipsGuide</span>
+        </a>
+        <p class="coming-soon-footer__copy">&copy; 2025 ChampionshipsGuide. All rights reserved.</p>
+        <a href="index.html" class="coming-soon-footer__home">&#8592; Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
